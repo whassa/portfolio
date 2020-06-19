@@ -1,23 +1,28 @@
 
 var frames = 0;
 var gameElements = [];
-var delay = 50;
-
 var squareSize = 50;
+var headerSize = 40;
 
 var game = {
     score: 0,
+    maxTime: 60,
+    time: 0,
     canvas : document.createElement("canvas"),
+
     startButton : function() {
         this.clear();
         this.showMenu = false;
         gameElements = [];
+        this.time = this.maxTime;
+        showTime();
         this.countDown();
     },
     start: function() {
         this.clear();
         renderGameItems();
-        setInterval(function(){ updateGameArea();}, 20);
+        this.timeInterval = setInterval(function(){ updateTime();}, 1000);
+        this.gameInterval = setInterval(function(){ updateGameArea();}, 2000);
         
     },
     load : function() {
@@ -30,7 +35,8 @@ var game = {
   	},
     clear : function() {
         //clearInterval(this.interval)
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.context.clearRect(0, headerSize, this.canvas.width, this.canvas.height);
+        this.context.clearRect(game.canvas.width-120, 0, 120, 40);
     },
     menu : function() {
         this.clear();
@@ -55,6 +61,14 @@ var game = {
             setTimeout( () => { game.start() },  1000);
         }
     },
+    gameOver : function(){
+        clearInterval(this.gameInterval);
+        clearInterval(this.timeInterval);
+        this.clear();
+
+        contentText(this.canvas.width/2-100, 300, "italic 30px Arial", "Final Score : "+ game.score);
+        menuButton(this.canvas.width/2-95, 350, 180, 50, () => { game.menu() }, "Return to menu");
+    }
     
 }
 
@@ -65,11 +79,7 @@ function startGame(){
 
 
 function updateGameArea (){
-    frames += 1;
-    if ( frames > delay) {
-        renderGameItems();
-        frames = 0;
-    }
+    renderGameItems();
 }
 
 function renderGameItems(){
@@ -83,11 +93,41 @@ function showScore(){
     contentText(game.canvas.width-120, 20, "bold 20px Arial", "Score : "+ game.score);
 }
 
+function handleTime(){
+    let minute =  game.time/60;
+    let secLeft = game.time%60;
+    if (secLeft < 10){
+        secLeft = ("0" + secLeft).slice(-2);
+    }
+    minute = Math.floor(minute);
+
+    const time = minute + ":"+secLeft;
+    return time;
+}
+
+function updateTime(){
+
+    game.time -= 1;
+    if (game.time <= 0){
+        game.gameOver();
+    } else {
+        showTime();
+    }
+}
+
+function showTime(){   
+
+    ctx = game.canvas.getContext("2d");
+    ctx.clearRect(0, 0, 200, 40);
+    contentText(20, 20,  "bold 20px Arial", "Time left : "+ handleTime())
+    
+}
+
 function generateRandomSquare(){
     gameElements = [];
 
-    let randomX = rando(game.canvas.width-squareSize);
-    let randomY = rando(20, game.canvas.height-squareSize);
+    let randomX = rando(0, game.canvas.width-squareSize);
+    let randomY = rando(headerSize, game.canvas.height-squareSize);
 
     var ctx = game.canvas.getContext("2d");
     ctx.fillStyle = "#FF0000";
@@ -105,12 +145,12 @@ function generateRandomSquare(){
 function squareIsClicked(element){
     if( !element.isClick){
         element.isClick = true;
+        game.score += 10;
         game.clear();
-        showScore();
         var ctx = game.canvas.getContext("2d");
         ctx.fillStyle = "#00FF00";
         ctx.fillRect(element.x,element.y,element.height,element.width);
-        game.score += 10;
+        showScore();
     } else {
         console.log('noMore')
     }
@@ -149,9 +189,4 @@ function canvaIsClicked(event) {
             element.callbackFct(element);
         }
     });
-}
-
-
-function playGame(){
-	
 }
