@@ -1,18 +1,23 @@
 
+
+const DEFAULT_SQUARE_SIZE = 50;
+const DEFAULT_TIME_BETWEEN_SHOT = 2000;
+const DEFAULT_MAX_TIME = 60;
 var frames = 0;
 var gameElements = [];
-var squareSize = 50;
 var headerSize = 40;
+var squareSize, timeBetweenShot;
 
 var game = {
     score: 0,
-    maxTime: 60,
+    maxTime: DEFAULT_MAX_TIME,
     time: 0,
-    canvas : document.createElement("canvas"),
-
-    startButton : function() {
+    canvas: document.createElement("canvas"),
+    inputSize: null,
+    inputDelay: null,
+    inputMaxTime: null,
+    startButton: function() {
         this.clear();
-        this.showMenu = false;
         gameElements = [];
         this.time = this.maxTime;
         showTime();
@@ -22,10 +27,10 @@ var game = {
         this.clear();
         renderGameItems();
         this.timeInterval = setInterval(function(){ updateTime();}, 1000);
-        this.gameInterval = setInterval(function(){ updateGameArea();}, 2000);
+        this.gameInterval = setInterval(function(){ updateGameArea(); console.log(gameElements)}, timeBetweenShot);
         
     },
-    load : function() {
+    load: function() {
         this.canvas.width = 1000;
         this.canvas.height = 800;
         this.context = this.canvas.getContext("2d");
@@ -33,19 +38,19 @@ var game = {
         this.frameNo = 0;
         this.canvas.addEventListener('click', canvaIsClicked, false);
   	},
-    clear : function() {
+    clear: function() {
         //clearInterval(this.interval)
         this.context.clearRect(0, headerSize, this.canvas.width, this.canvas.height);
         this.context.clearRect(game.canvas.width-120, 0, 120, 40);
     },
-    menu : function() {
+    menu: function() {
         this.clear();
-        this.showMenu = true;
+        gameElements = [];
         contentText(this.canvas.width/2-100, 300, "italic 30px Arial", "Project Target")
         menuButton(this.canvas.width/2-50, 350, 100, 50, () => { game.startButton() }, "start");
-        menuButton(this.canvas.width/2-50, 420, 100, 50, () => { console.log('xd') }, "settings");
+        menuButton(this.canvas.width/2-50, 420, 100, 50, () => { game.setting() }, "settings");
     },
-    countDown : function( number ) {
+    countDown: function( number ) {
         if (number === undefined){
             number = 3;
         } 
@@ -61,18 +66,81 @@ var game = {
             setTimeout( () => { game.start() },  1000);
         }
     },
-    gameOver : function(){
+    gameOver: function(){
         clearInterval(this.gameInterval);
         clearInterval(this.timeInterval);
-        this.clear();
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
         contentText(this.canvas.width/2-100, 300, "italic 30px Arial", "Final Score : "+ game.score);
         menuButton(this.canvas.width/2-95, 350, 180, 50, () => { game.menu() }, "Return to menu");
+    },
+    setting: function(){
+        gameElements = [];
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        contentText(this.canvas.width/2 - 200, 275, "bold 20px Arial", 'Square size :');
+        this.inputSize = new CanvasInput({
+            canvas: game.canvas,
+            x: game.canvas.width/2-65,
+            y: 250,
+            fontSize: 18,
+            fontColor: '#212121',
+            fontFamily: 'Arial',
+            width: 300,
+            padding: 8,
+            borderWidth: 1,
+            borderColor: '#000',
+            borderRadius: 4,
+            placeHolder: 'Between 5 and 200',
+            value: squareSize,
+        })
+        //( in milliseconds ) 
+        contentText(this.canvas.width/2 - 300, 375, "bold 20px Arial", "Delay between square :" );
+        contentText(this.canvas.width/2 - 275, 400, "bold 20px Arial", "( in milliseconds ) " );
+        this.inputDelay = new CanvasInput({
+            canvas: game.canvas,
+            x: game.canvas.width/2-65,
+            y: 350,
+            fontSize: 18,
+            fontColor: '#212121',
+            fontFamily: 'Arial',
+            width: 300,
+            padding: 8,
+            borderWidth: 1,
+            borderColor: '#000',
+            borderRadius: 4,
+            placeHolder: 'Between 100 and 100000',
+            value: timeBetweenShot,
+        })
+        this.inputSize.focus();
+        menuButton(this.canvas.width/2-75, 450, 100, 50, () => { game.save() }, "Save");
+        menuButton(this.canvas.width/2+75, 450, 100, 50, () => { game.returnToMenu() }, "Cancel");
+    },
+    returnToMenu: function(){
+        this.inputSize.destroy();
+        this.inputSize =  null;
+        this.inputDelay.destroy();
+        this.inputDelay =  null;
+        this.menu();
+    },
+    save: function(){
+        if (this.inputSize.value() >= 5 && this.inputSize.value() <= 200) {
+            squareSize = this.inputSize.value();
+            setCookie('squareSize', squareSize, 730);
+        }
+        if (this.inputDelay.value() >= 100 && this.inputDelay.value() <= 100000) {
+            timeBetweenShot = this.inputDelay.value();
+            setCookie('timeBetweenShot', timeBetweenShot, 730);
+        }
+        this.returnToMenu();
     }
     
 }
 
+
+
+
 function startGame(){
+    cookiesReaderStart();
     game.load();
     game.menu();
 }
@@ -185,8 +253,53 @@ function canvaIsClicked(event) {
         y = event.pageY - 8;
 
     gameElements.forEach(function(element) {
+        console.log(element)
         if (y > element.y && y < element.y + element.height && x > element.x && x < element.x + element.width) {
             element.callbackFct(element);
         }
     });
+}
+
+function cookiesReaderStart(){
+    squareSize = getCookie('squareSize');
+    timeBetweenShot = getCookie('timeBetweenShot');
+    game.maxTime =  getCookie('maxTime');
+
+    if (squareSize === ""){
+        squareSize = DEFAULT_SQUARE_SIZE;
+        setCookie('squareSize', squareSize, 730);
+    }
+
+    if (timeBetweenShot === ""){
+        timeBetweenShot = DEFAULT_TIME_BETWEEN_SHOT;
+        setCookie('timeBetweenShot', timeBetweenShot, 730);
+    } 
+
+    if (game.maxTime === ""){
+        game.maxTime = DEFAULT_MAX_TIME;
+        setCookie('maxTime', game.maxTime, 730);
+    }
+
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+    return "";
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
