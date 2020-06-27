@@ -1,5 +1,3 @@
-
-
 const DEFAULT_SQUARE_SIZE = 50;
 const DEFAULT_TIME_BETWEEN_SHOT = 2000;
 const DEFAULT_MAX_TIME = 60;
@@ -245,8 +243,10 @@ function menuButton(x, y, width, height, callbackFct, message){
 }
 
 function canvaIsClicked(event) {
-    var x = event.pageX - 8,
-        y = event.pageY - 8;
+    var style = window.getComputedStyle(game.canvas);
+    var rect = game.canvas.getBoundingClientRect();
+    var x = event.pageX - rect.top;
+    var y = event.pageY - rect.left;
     gameElements.forEach(function(element) {
         if (y > element.y 
             && y < element.y + element.height 
