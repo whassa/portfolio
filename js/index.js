@@ -110,13 +110,32 @@ var game = {
             placeHolder: 'Between 100 and 100000',
             value: timeBetweenShot,
         })
+        contentText(this.canvas.width/2 - 190, 475, "bold 20px Arial", "Game time :" );
+        contentText(this.canvas.width/2 - 200, 500, "bold 20px Arial", "( in seconds ) " );
+        this.inputMaxTime = new CanvasInput({
+            canvas: game.canvas,
+            x: game.canvas.width/2-65,
+            y: 450,
+            fontSize: 18,
+            fontColor: '#212121',
+            fontFamily: 'Arial',
+            width: 300,
+            padding: 8,
+            borderWidth: 1,
+            borderColor: '#000',
+            borderRadius: 4,
+            placeHolder: 'Between 10 and 300',
+            value: this.maxTime,
+        })
+
         this.inputSize.focus();
-        menuButton(this.canvas.width/2-75, 450, 100, 50, () => { game.save() }, "Save");
-        menuButton(this.canvas.width/2+75, 450, 100, 50, () => { game.returnToMenu() }, "Cancel");
+        menuButton(this.canvas.width/2-75, 550, 100, 50, () => { game.save() }, "Save");
+        menuButton(this.canvas.width/2+75, 550, 100, 50, () => { game.returnToMenu() }, "Cancel");
     },
     returnToMenu: function(){
         this.inputSize.destroy();
         this.inputDelay.destroy();
+        this.inputMaxTime.destroy();
         //this.inputSize =  null;
         //this.inputDelay =  null;
         this.menu();
@@ -129,6 +148,11 @@ var game = {
         if (this.inputDelay.value() >= 100 && this.inputDelay.value() <= 100000) {
             timeBetweenShot = this.inputDelay.value();
             setCookie('timeBetweenShot', timeBetweenShot, 730);
+        }
+
+        if (this.inputMaxTime.value() >= 10 && this.inputMaxTime.value() <= 300) {
+            this.maxTime = this.inputMaxTime.value();
+            setCookie('maxTime', this.maxTime, 730);
         }
         this.returnToMenu();
     }
