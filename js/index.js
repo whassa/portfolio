@@ -25,10 +25,10 @@ var game = {
     },
     start: function() {
         this.clear();
+        this.score = 0;
         renderGameItems();
         this.timeInterval = setInterval(function(){ updateTime();}, 1000);
         this.gameInterval = setInterval(function(){ updateGameArea();}, timeBetweenShot);
-        
     },
     load: function() {
         this.canvas.width = 1000;
@@ -67,6 +67,7 @@ var game = {
         }
     },
     gameOver: function(){
+        gameElements = [];
         clearInterval(this.gameInterval);
         clearInterval(this.timeInterval);
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
@@ -117,9 +118,9 @@ var game = {
     },
     returnToMenu: function(){
         this.inputSize.destroy();
-        this.inputSize =  null;
         this.inputDelay.destroy();
-        this.inputDelay =  null;
+        //this.inputSize =  null;
+        //this.inputDelay =  null;
         this.menu();
     },
     save: function(){
@@ -135,9 +136,6 @@ var game = {
     }
     
 }
-
-
-
 
 function startGame(){
     cookiesReaderStart();
@@ -219,8 +217,6 @@ function squareIsClicked(element){
         ctx.fillStyle = "#00FF00";
         ctx.fillRect(element.x,element.y,element.height,element.width);
         showScore();
-    } else {
-        console.log('noMore')
     }
 }
 
@@ -266,7 +262,6 @@ function cookiesReaderStart(){
     squareSize = getCookie('squareSize');
     timeBetweenShot = getCookie('timeBetweenShot');
     game.maxTime =  getCookie('maxTime');
-
     if (squareSize === ""){
         squareSize = DEFAULT_SQUARE_SIZE;
         setCookie('squareSize', squareSize, 730);
