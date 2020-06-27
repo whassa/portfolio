@@ -27,7 +27,7 @@ var game = {
         this.clear();
         renderGameItems();
         this.timeInterval = setInterval(function(){ updateTime();}, 1000);
-        this.gameInterval = setInterval(function(){ updateGameArea(); console.log(gameElements)}, timeBetweenShot);
+        this.gameInterval = setInterval(function(){ updateGameArea();}, timeBetweenShot);
         
     },
     load: function() {
@@ -202,10 +202,10 @@ function generateRandomSquare(){
     ctx.fillRect(randomX,randomY,squareSize,squareSize);
 
     gameElements.push({ 
-        x: randomX,
-        y: randomY,
-        width: squareSize,
-        height: squareSize,
+        x: parseInt(randomX),
+        y: parseInt(randomY),
+        width: parseInt(squareSize),
+        height: parseInt(squareSize),
         callbackFct: squareIsClicked,
     });
 }
@@ -251,10 +251,12 @@ function menuButton(x, y, width, height, callbackFct, message){
 function canvaIsClicked(event) {
     var x = event.pageX - 8,
         y = event.pageY - 8;
-
     gameElements.forEach(function(element) {
-        console.log(element)
-        if (y > element.y && y < element.y + element.height && x > element.x && x < element.x + element.width) {
+        if (y > element.y 
+            && y < element.y + element.height 
+            && x > element.x
+            && x < element.x + element.width
+        ) {
             element.callbackFct(element);
         }
     });
