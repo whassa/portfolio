@@ -1,0 +1,29 @@
+{
+  "name": "projecttarget",
+  "version": "1.0.0",
+  "description": "Me trying to make a javascript game in my free time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url sass/index.scss css/index.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whassa/projectTarget.git"
+  },
+  "author": "Whassa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whassa/projectTarget/issues"
+  },
+  "homepage": "https://github.com/whassa/projectTarget#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "bulma": "^0.9.0",
+    "node-sass": "^4.14.1"
+  }
+}
