@@ -7,5 +7,5 @@ To start the project simply copy the github project then do those command. You'l
 ```bash
 npm install
 npm run css-build
-node app.js
+npm start
 ```
