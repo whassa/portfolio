@@ -23,7 +23,8 @@
   "homepage": "https://github.com/whassa/projectTarget#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "sprightly": "^1.0.3"
+    "sprightly": "^1.0.3",
+    "webpack": "^5.66.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.16.8",
