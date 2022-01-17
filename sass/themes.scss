@@ -1,0 +1,18 @@
+
+:root.light {
+    --primary: white;
+    --primary-darker: hsl(0, 0%, 96%);
+    --primary-text: black;
+}
+:root.dark {
+    --primary: #16141c;
+    --primary-darker:  #0c0b0f;
+    --primary-text: hsl(0, 0%, 96%);
+}
+
+
+:root.theme-transition,
+:root.theme-transition * {
+    transition: background-color 1000ms !important;
+    transition-delay: 0s !important;
+}

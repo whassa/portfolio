@@ -1,2 +1,54 @@
 @charset "utf-8";
 @import "../node_modules/bulma/bulma.sass";
+@import 'themes.scss';
+
+
+$primary: var(--primary);
+$primary-darker: var(--primary-darker);
+$primary-text: var(--primary-text);
+
+@import 'slider.scss';
+
+#container {
+    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
+    height: 100%;
+    width: 100vw;
+    max-width: 20000px;
+    max-height: 20000px;
+    background: $primary;
+    margin: 0;
+}
+
+.description {
+    background-color: $primary-darker;
+    padding: 30px;
+    color:  $primary-text;
+    &-container {
+        margin-top: 80px;
+    }
+
+}
+
+.menu {
+    color:  $primary-text;
+    background-color: $primary;
+    .navbar-item {
+        color: $primary-text;
+        &:hover {
+            color: $primary-text;
+            background-color: $primary-darker;
+        }
+        &:focus {
+            color: $primary-text;
+            background-color: $primary-darker;
+        }
+    }
+}
+
+.navbar-menu.is-active {
+    position: absolute;
+    width: calc(100vw - 3rem);
+    background-color: $primary;
+}
+

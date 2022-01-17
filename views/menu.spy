@@ -1,0 +1,42 @@
+<nav class="menu navbar pl-5 pr-5" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/home">
+            Remi's portfolio 
+        </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item" href="/home">
+                Home
+            </a>
+            <a class="navbar-item" href="/projectTarget">
+                Project Target
+            </a>
+            <a class="navbar-item" href="https://whattoeat-eta.vercel.app/">
+                What to eat ?
+            </a>
+
+        </div>
+        <div class="navbar-end">
+            <div id="theme-changer" class="navbar-item switch-container" >
+                <span>
+                    Change theme
+                </span>
+                
+                <label class="switch">
+                    <input id="theme-checkbox" type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <a class="navbar-item" href="https://github.com/whassa">
+                <img src="img/GitHub-Mark-Light-32px.png" />
+                <span style="padding-left: 3px">My Github</span>
+            </a>
+        </div>
+        </div>
+</nav>
