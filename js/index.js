@@ -14,25 +14,31 @@ window.addEventListener('resize', () => {
 document.getElementById("theme-changer").onclick = function(e) {
   e.preventDefault();
   const checkbox = document.getElementById("theme-checkbox");
+  const github = document.getElementById("github-logo");
+  console.log(github);
   checkbox.checked = !checkbox.checked;
   if ( checkbox.checked ) {
     document.documentElement.className = "dark"; 
     setCookie('theme', "dark", 730);
+    github.src = "img/GitHub-Mark-Light-32px.png"
   } else {
     document.documentElement.className = "light"; 
     setCookie('theme', "light", 730);
+    github.src = "img/GitHub-Mark-32px.png"
   }
 };
 
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
+  const github = document.getElementById("github-logo");
   if (getCookie("theme") === "dark") {
     document.documentElement.className = "dark";
+    github.src = "img/GitHub-Mark-Light-32px.png"
     document.getElementById("theme-checkbox").checked = true;
   } else {
     document.documentElement.className = "light";
+    github.src = "img/GitHub-Mark-32px.png"
     document.getElementById("theme-checkbox").checked = false;
   }
 

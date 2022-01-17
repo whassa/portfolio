@@ -7865,7 +7865,6 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   padding: 0.5rem 0.75rem;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   cursor: pointer; }
   .switch-container span {
     margin-right: 10px; }
