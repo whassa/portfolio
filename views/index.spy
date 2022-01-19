@@ -12,14 +12,20 @@
 			<< menu >>
 			<div class="content" style="height: 100%">
 				<div class="columns is-mobile is-centered description-container">
-					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-two-fifths-desktop description" >
-						<p class="is-size-5">
-							Hey, my name is Rémi or you can call me Whassa. I'm currently studying in Software Engineering at <a href="https://www.etsmtl.ca/">ETS</a>
-							in Montreal. This is a small Website portfolio I've created for you to discover some of my projects. 
-							I'm a full stack developper who has specialized in ReactJs and NextJs. I also know a lot of web language such as Ruby, PHP and Python.
-							I'm a curious person and I always like to know for more. 
-							Also, there's a link to my github pages in the menu if you're more interested to know more about what I'm doing!
-						</p>
+					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen" >
+						<div class="card">
+                            <div class="card-content">
+								<div class="content">
+									<p class="is-size-5">
+										Hey, my name is Rémi or you can call me Whassa. I'm currently studying in Software Engineering at <a href="https://www.etsmtl.ca/">ETS</a>
+										in Montreal. This is a small Website portfolio I've created for you to discover some of my projects. 
+										I'm a full stack developper who has specialized in ReactJs and NextJs. I also know some web languages such as Javascript, Ruby, PHP and Python.
+										I'm a curious person and I always like to know for more. 
+										Also, there's a link to my github pages in the menu if you're more interested to know more about what I'm doing!
+									</p>
+								</div>
+							</div>
+                        </div>
 					</div>
 				</div>
 				<div class="columns is-mobile is-centered">

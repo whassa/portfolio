@@ -14,6 +14,9 @@
             <a class="navbar-item" href="/home">
                 Home
             </a>
+            <a class="navbar-item" href="/works">
+                My works
+            </a>
             <a class="navbar-item" href="/projectTarget">
                 Project Target
             </a>

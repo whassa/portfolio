@@ -21,15 +21,18 @@ $primary-text: var(--primary-text);
     margin: 0;
 }
 
-.description {
-    background-color: $primary-darker;
-    padding: 30px;
-    color:  $primary-text;
-    &-container {
-        margin-top: 80px;
-    }
-
+.description-container {
+    margin-top: 80px;
 }
+
+.card {
+    background-color: $primary-darker;
+    color: $primary-text;
+    .title {
+        color: $primary-text;
+    }
+}
+
 
 .menu {
     color:  $primary-text;
