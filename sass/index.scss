@@ -8,6 +8,7 @@ $primary-darker: var(--primary-darker);
 $primary-text: var(--primary-text);
 
 @import 'slider.scss';
+@import 'heartbeat.scss';
 
 #container {
     min-height: 100vh;
