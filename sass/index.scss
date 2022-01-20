@@ -10,6 +10,10 @@ $primary-text: var(--primary-text);
 @import 'slider.scss';
 @import 'heartbeat.scss';
 
+body {
+    overflow-x: hidden;
+}
+
 #container {
     min-height: 100vh;
     min-height: calc(var(--vh, 1vh) * 100);

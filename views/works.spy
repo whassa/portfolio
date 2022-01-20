@@ -15,7 +15,6 @@
                 <div class="columns is-mobile is-centered">
 					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen mt-5" >
                         <div class="card">
-            
                             <div class="card-content">
                             <div class="media">
                                 <div class="media-content">
@@ -51,7 +50,7 @@
                             <div class="card-content">
                             <div class="media">
                                 <div class="media-content">
-                                <p class="title is-4">Intern Web developper at <a href="https://dakis.com/" rel="noopener noreferrer">Dakis</a></p>
+                                <p class="title is-4">Intern Web developper and Web developper at <a href="https://dakis.com/" rel="noopener noreferrer">Dakis</a></p>
                                 </div>
                             </div>
                         
@@ -111,7 +110,7 @@
                             <div class="card-content">
                             <div class="media">
                                 <div class="media-content">
-                                <p class="title is-4">Intern Web developper at <a href="https://oneprovider.com/" rel="noopener noreferrer">OneProvider</a></p>
+                                <p class="title is-4">Intern Web developper and Web developper at <a href="https://oneprovider.com/" rel="noopener noreferrer">OneProvider</a></p>
                                 </div>
                             </div>
                         
