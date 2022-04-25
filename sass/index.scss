@@ -11,7 +11,7 @@ $primary-text: var(--primary-text);
 @import 'heartbeat.scss';
 
 body {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #container {

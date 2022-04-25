@@ -7971,7 +7971,7 @@ input:checked + .slider:before {
     width: 0%; } }
 
 body {
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 #container {
   min-height: 100vh;
