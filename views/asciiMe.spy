@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="light">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+			<style>
+				canvas {
+				    border:1px solid #d3d3d3;
+				    background-color: #f1f1f1;
+				}
+			</style>
+		<title>Project Target</title>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+	<body>
+		<div id="container" class="container is-max-desktop">
+			<< menu >>
+			<div id="ascii-hidden"> 
+				<video id="video" width="100" height="60" autoplay />
+				<canvas id="canva"  width="100" height="60" />
+			</div> 
+			<div id="content" class="is-mobile is-centered mt-2">
+				<div class="row"">
+					<h1 class="title is-1 is-centered" style="text-align: center;">
+						Ascii yourself
+					</h1>
+				</div>
+				<div class="row mb-5">
+					<h2 class="subtitle" style="text-align: center;">
+						Open your camera to see yourself in ascii code. It should work on computer and recent browser.
+					</h2>
+				</div>
+				<div class="row">
+					<div id="ascii-video" class="mx-auto"/>
+				</div>
+			</div>
+		</div>
+		<script src="js/bundle.js" type="text/javascript"></script>
+		<script src="js/asciiMe.js"  type="text/javascript"></script>
+	</body>
+</html>

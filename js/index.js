@@ -15,7 +15,6 @@ document.getElementById("theme-changer").onclick = function(e) {
   e.preventDefault();
   const checkbox = document.getElementById("theme-checkbox");
   const github = document.getElementById("github-logo");
-  console.log(github);
   checkbox.checked = !checkbox.checked;
   if ( checkbox.checked ) {
     document.documentElement.className = "dark"; 
@@ -53,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Get the target from the "data-target" attribute
         const target = el.dataset.target;
-        console.log(target);
         const $target = document.getElementById(target);
 
         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"

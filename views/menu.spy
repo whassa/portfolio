@@ -20,6 +20,9 @@
             <a class="navbar-item" href="/projectTarget">
                 Project Target
             </a>
+            <a class="navbar-item" href="/asciiMe">
+                Ascii me
+            </a>
             <a class="navbar-item" href="https://whattoeat-eta.vercel.app/">
                 What to eat ?
             </a>

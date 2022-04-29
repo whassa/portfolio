@@ -8008,3 +8008,24 @@ body {
   position: absolute;
   width: calc(100vw - 3rem);
   background-color: var(--primary); }
+
+#ascii-video {
+  width: 800px;
+  height: 800px;
+  overflow-x: hidden;
+  font-family: 'Courier';
+  font-size: 10pt;
+  line-height: 10pt;
+  color: var(--primary-text);
+}
+#ascii-hidden {
+  display: none;
+}
+
+.title {
+  color: var(--primary-text);
+}
+
+.subtitle {
+  color: var(--primary-text);
+}
