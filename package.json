@@ -23,7 +23,7 @@
   "homepage": "https://github.com/whassa/projectTarget#readme",
   "dependencies": {
     "@babel/core": "^7.16.7",
-    "express": "^4.17.2",
+    "express": "^4.17.3",
     "node-sass": "^7.0.1",
     "sprightly": "^1.0.3",
     "webpack": "^5.66.0"
