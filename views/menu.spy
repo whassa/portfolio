@@ -23,7 +23,7 @@
             <a class="navbar-item" href="/asciiMe">
                 Ascii me
             </a>
-            <a class="navbar-item" href="https://whattoeat-eta.vercel.app/">
+            <a class="navbar-item" href="https://whattoeat-eta.vercel.app/" target="_blank">
                 What to eat ?
             </a>
 

@@ -6,7 +6,6 @@ const video = document.getElementById('video')
 const len = density.length;
 const canva = document.getElementById('canva');    
 const asciiVideo = document.getElementById('ascii-video');
-console.log(asciiVideo)
 
 function renderImage(img) {
     text = '';

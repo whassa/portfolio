@@ -34,6 +34,11 @@
 				<div class="row">
 					<div id="ascii-video" class="mx-auto"/>
 				</div>
+				<div class="row mt-2">
+					<div class="subtitle" style="text-align: center;">
+						Strongly based on the coding train video: <a href="https://youtu.be/55iwMYv8tGI">https://youtu.be/55iwMYv8tGI</a>
+					</div>
+				</div>
 			</div>
 		</div>
 		<script src="js/bundle.js" type="text/javascript"></script>

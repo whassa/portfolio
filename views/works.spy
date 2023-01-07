@@ -18,6 +18,43 @@
                             <div class="card-content">
                             <div class="media">
                                 <div class="media-content">
+                                <p class="title is-4">Web developper at <a href="https://www.lmmv.com/index.html" rel="noopener noreferrer">Like Minded Lab</a></p>
+                                </div>
+                            </div>
+                    
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        Complete multiple Javascript tasks 
+                                    </li>
+                                    <li>
+                                        Build and develop multiple cross platform project with React Native and ElectronJs
+                                    </li>
+                                    <li>
+                                        Integgrate Continuous Integration to project
+                                    </li>
+                                    <li>
+                                        Attend the code review within the company 
+                                    </li>
+                                    <li>
+                                        Fix bugs.
+                                    </li>
+                                    <li>
+                                        Optimize the code.
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-mobile is-centered">
+					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen mt-5" >
+                        <div class="card">
+                            <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
                                 <p class="title is-4">Intern Web developper at <a href="https://www.stingray.com/" rel="noopener noreferrer">Stingray</a></p>
                                 </div>
                             </div>
