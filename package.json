@@ -23,7 +23,7 @@
   "homepage": "https://github.com/whassa/portfolio#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "node-sass": "^7.0.3",
+    "node-sass": "^9.0.0",
     "sprightly": "^1.0.3",
     "webpack": "^5.76.0"
   },
