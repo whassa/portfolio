@@ -1,176 +1,179 @@
 <!DOCTYPE html>
 <html class="light">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-		<meta content="utf-8" http-equiv="encoding">
-		<title>Remi's portfolio</title>
-		<link rel="stylesheet" href="css/index.css">
-	</head>
-	<body>
-        <div id="container" class="container">
-			<< menu >>
-          
-            <div class="content" style="height: 100%">
-                <div class="columns is-mobile is-centered">
-					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen mt-5" >
-                        <div class="card">
-                            <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                <p class="title is-4">Web developper at <a href="https://www.lmmv.com/index.html" rel="noopener noreferrer">Like Minded Lab</a></p>
-                                </div>
-                            </div>
-                    
-                            <div class="content">
-                                <ul>
-                                    <li>
-                                        Complete multiple Javascript tasks 
-                                    </li>
-                                    <li>
-                                        Build and develop multiple cross platform project with React Native and ElectronJs
-                                    </li>
-                                    <li>
-                                        Integgrate Continuous Integration to project
-                                    </li>
-                                    <li>
-                                        Attend the code review within the company 
-                                    </li>
-                                    <li>
-                                        Fix bugs.
-                                    </li>
-                                    <li>
-                                        Optimize the code.
-                                    </li>
-                                </ul>
-                                
-                            </div>
-                            </div>
-                        </div>
-                    </div>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <title>Remi's portfolio</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div id="container" class="container">
+      << menu >>
+      <div class="content" style="height: 100%">
+        <div class="columns is-mobile is-centered">
+          <div
+            class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen mt-5"
+          >
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">
+                      Web developper at
+                      <a
+                        href="https://www.lmmv.com/index.html"
+                        rel="noopener noreferrer"
+                        >Like Minded Lab</a
+                      >
+                    </p>
+                  </div>
                 </div>
-                <div class="columns is-mobile is-centered">
-					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen mt-5" >
-                        <div class="card">
-                            <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                <p class="title is-4">Intern Web developper at <a href="https://www.stingray.com/" rel="noopener noreferrer">Stingray</a></p>
-                                </div>
-                            </div>
-                        
-                            <div class="content">
-                                <ul>
-                                    <li>
-                                        Carry out and complete NextJs projects
-                                    </li>
-                                    <li>
-                                        Attend the code review within the company 
-                                    </li>
-                                    <li>
-                                        Fix bugs.
-                                    </li>
-                                    <li>
-                                        Optimize the code.
-                                    </li>
-                                </ul>
-                                
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="columns is-mobile is-centered">
-					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen" >
-                        <div class="card">
-            
-                            <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                <p class="title is-4">Intern Web developper and Web developper at <a href="https://dakis.com/" rel="noopener noreferrer">Dakis</a></p>
-                                </div>
-                            </div>
-                        
-                            <div class="content">
-                                <ul>
-                                    <li>
-                                        Carry out and complete React projects
-                                    </li>
-                                    <li>
-                                        Attend the code review within the company
-                                    </li>
-                                    <li>
-                                        Optimize company code and implement good programming practices.
-                                    </li>
-                                    <li>
-                                        Work in an Agile work environment
-                                    </li>
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="columns is-mobile is-centered">
-					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen" >
-                        <div class="card">
-                            <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                <p class="title is-4">Intern Web developper at <a href="http://orangetango.com/" rel="noopener noreferrer">OrangeTango</a></p>
-                                </div>
-                            </div>
-                            <div class="content">
-                                <ul>
-                                    <li>
-                                        Create content management platforms.
-                                    </li>
-                                    <li>
-                                        Carry out website projects in specific times.
-                                    </li>
-                                    <li>
-                                        Fix bugs.
-                                    </li>
-                                    <li>
-                                        Optimize company code and implement good programming practices.
-                                    </li>
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="columns is-mobile is-centered">
-					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen" >
-                        <div class="card">
-            
-                            <div class="card-content">
-                            <div class="media">
-                                <div class="media-content">
-                                <p class="title is-4">Intern Web developper and Web developper at <a href="https://oneprovider.com/" rel="noopener noreferrer">OneProvider</a></p>
-                                </div>
-                            </div>
-                        
-                            <div class="content">
-                                <ul>
-                                    <li>
-                                        Carry out web development projects.
-                                    </li>
-                                    <li>
-                                        Fix bugs.
-                                    </li>
-                                    <li>
-                                        Optimize the code.
-                                    </li>
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="js/bundle.js" type="text/javascript"></script>
 
-    </body>
+                <div class="content">
+                  <ul>
+                    <li>Complete multiple Javascript tasks</li>
+                    <li>
+                      Build and develop multiple cross platform project with
+                      React Native and ElectronJs
+                    </li>
+                    <li>Integgrate Continuous Integration to project</li>
+                    <li>Attend the code review within the company</li>
+                    <li>Fix bugs.</li>
+                    <li>Optimize the code.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-mobile is-centered">
+          <div
+            class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen mt-5"
+          >
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">
+                      Intern Web developper at
+                      <a
+                        href="https://www.stingray.com/"
+                        rel="noopener noreferrer"
+                        >Stingray</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <ul>
+                    <li>Carry out and complete NextJs projects</li>
+                    <li>Attend the code review within the company</li>
+                    <li>Fix bugs.</li>
+                    <li>Optimize the code.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-mobile is-centered">
+          <div
+            class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen"
+          >
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">
+                      Intern Web developper and Web developper at
+                      <a href="https://dakis.com/" rel="noopener noreferrer"
+                        >Dakis</a
+                      >
+                    </p>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <ul>
+                    <li>Carry out and complete React projects</li>
+                    <li>Attend the code review within the company</li>
+                    <li>
+                      Optimize company code and implement good programming
+                      practices.
+                    </li>
+                    <li>Work in an Agile work environment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-mobile is-centered">
+          <div
+            class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen"
+          >
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">
+                      Intern Web developper at
+                      <a
+                        href="http://orangetango.com/"
+                        rel="noopener noreferrer"
+                        >OrangeTango</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <ul>
+                    <li>Create content management platforms.</li>
+                    <li>Carry out website projects in specific times.</li>
+                    <li>Fix bugs.</li>
+                    <li>
+                      Optimize company code and implement good programming
+                      practices.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns is-mobile is-centered">
+          <div
+            class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen"
+          >
+            <div class="card">
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">
+                      Intern Web developper and Web developper at
+                      <a
+                        href="https://oneprovider.com/"
+                        rel="noopener noreferrer"
+                        >OneProvider</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="content">
+                  <ul>
+                    <li>Carry out web development projects.</li>
+                    <li>Fix bugs.</li>
+                    <li>Optimize the code.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bundle.js" type="text/javascript"></script>
+  </body>
 </html>

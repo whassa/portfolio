@@ -9,6 +9,7 @@ $primary-text: var(--primary-text);
 
 @import 'slider.scss';
 @import 'heartbeat.scss';
+@import 'asci.scss';
 
 body {
     overflow: hidden;
@@ -23,6 +24,7 @@ body {
     max-height: 20000px;
     background: $primary;
     margin: 0;
+    padding-bottom: 20px;
 }
 
 .description-container {
@@ -59,4 +61,3 @@ body {
     width: calc(100vw - 3rem);
     background-color: $primary;
 }
-

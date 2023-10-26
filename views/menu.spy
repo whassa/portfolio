@@ -26,7 +26,9 @@
             <a class="navbar-item" href="https://whattoeat-eta.vercel.app/" target="_blank">
                 What to eat ?
             </a>
-
+            <a class="navbar-item" href="https://dashboard.twitch.tv/extensions/259e9bszh9bpm34kvozmttyyqjdrq2-1" target="_blank">
+                Keyhole
+            </a>
         </div>
         <div class="navbar-end">
             <div id="theme-changer" class="navbar-item switch-container" >
