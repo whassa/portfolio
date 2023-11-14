@@ -4,12 +4,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 		<meta content="utf-8" http-equiv="encoding">
+		<meta name="keywords" content="portfolio, remi, tag reference"> 
+		<meta name="description" content=""> 
+		<meta name="author" content="Whassa">
+		<meta property="og:description" content="A simple dev portfolio." />
+		<meta property="og:title" content="Remi's portfolio" />
+ 
 		<title>Remi's portfolio</title>
 		<link rel="stylesheet" href="css/index.css">
 	</head>
 	<body>
 		<div id="container" class="container">
-			<< menu >>
+			<%- include('./menu'); %>
 			<div class="content" style="height: 100%">
 				<div class="columns is-mobile is-centered description-container">
 					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop is-two-fifths-widescreen" >
@@ -32,7 +38,7 @@
 				</div>
 				<div class="columns is-mobile is-centered">
 					<div class="column is-four-fifths-mobile is-four-fifths-tablet is-half-desktop animation-container">
-						<< animation >>
+						<%- include('./animation'); %>
 					</div>
 				</div>
 			</div>

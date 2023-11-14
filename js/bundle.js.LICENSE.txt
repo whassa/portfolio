@@ -1,9 +1,7 @@
 /*!
- *  CanvasInput v1.2.7
- *  http://goldfirestudios.com/blog/108/CanvasInput-HTML5-Canvas-Text-Input
+ * Toastify js 1.12.0
+ * https://github.com/apvarun/toastify-js
+ * @license MIT licensed
  *
- *  (c) 2013-2017, James Simpson of GoldFire Studios
- *  goldfirestudios.com
- *
- *  MIT License
+ * Copyright (C) 2018 Varun A P
  */

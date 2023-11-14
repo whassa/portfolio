@@ -3,6 +3,7 @@ var webpack = require('webpack');
 module.exports = {
     entry: [
         './js/index.js',
+        './js/works-drag.js'
     ],
     output: {
         path: path.resolve(__dirname, 'js/'),
@@ -17,6 +18,10 @@ module.exports = {
               options: {
                 "presets": ["@babel/preset-env"]
               }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             }
         ]
     }
