@@ -8001,10 +8001,10 @@ input:checked + .slider:before {
     width: 0%; } }
 
 .title {
-  color: var(--primary-text); }
+  color: var(--primary-text) !important; }
 
 .subtitle {
-  color: var(--primary-text); }
+  color: var(--primary-text) !important; }
 
 #ascii-video {
   width: 800px;
