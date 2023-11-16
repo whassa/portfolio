@@ -2,7 +2,7 @@
 This is a node server that I use to show my works.
 
 To start the project simply copy the github project then do those command. 
-You'll need [nodejs](https://nodejs.org/). My current version I'm using is v18.18.0 
+You'll need [nodejs](https://nodejs.org/). The current version I use is v18.18.0 
 After that you will need to set some ENV variable in .env file for a [mongodb](https://www.mongodb.com/).
 Exemple of the .env file is be situated in .env.example
 
